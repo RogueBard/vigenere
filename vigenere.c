@@ -1,3 +1,10 @@
+/** This is a vigenere cipher program that encrypts plaintext with a key. The key stores the ASCII value of a character
+* and increments the plaintext based on the amount of the key. The result is ciphertext. If the plaintext is larger
+* than the value of the key, the key will loop around. This key will skip the non-alpha characters in the plaintext.
+* 
+* Created by Michael Farmer
+*//
+
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
@@ -50,18 +57,13 @@ int main(int argc, string argv[])
         //prints cyphertext of plaintext, skpping plaintext if value is not alpha
         if(isalpha(plainText[i]))
         {
-            
         printf("%c", cipherText);
-        
         }
-            else
-            {
-                
-            printf("%c", plainText[i]);
-            
-            }
+        else
+        {
+        printf("%c", plainText[i]);
+        }
     }
-    
     printf("\n");
     
     return 0;
